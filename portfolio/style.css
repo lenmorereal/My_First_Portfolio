@@ -1,79 +1,99 @@
-/* Base styles for body and containers */
+/* General Styles */
 body {
-    display: flex;
-    flex-direction: column; /* Stack header, main, and footer vertically */
-    margin: 0;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color */
 }
 
+/* Header Styles */
 header {
-    background-color: #4CAF50; /* Example header color */
+    background-color: #007BFF; /* Blue background for the header */
     color: white;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-nav {
-    background-color: #333; /* Example navigation color */
+header h1 {
+    margin: 0;
 }
 
-nav ul {
-    list-style-type: none;
+header nav ul {
+    list-style-type: none; /* Remove bullet points */
     padding: 0;
 }
 
-nav ul li {
-    display: inline; /* Horizontal list */
+header nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
-    padding: 14px 20px;
-    text-decoration: none;
+    text-decoration: none; /* Remove underline */
 }
 
-nav ul li a:hover {
-    background-color: #ddd;
-    color: black; /* Change color on hover */
+/* Logo Styles */
+.logo {
+    font-size: 24px; /* Increase size of logo */
 }
 
+/* Main Section Styles */
 main {
-    display: flex; /* Flex container for article and aside */
-    flex-direction: row; /* Align article and aside side by side */
-    flex: auto; /* Allow main to adjust its height and width */
-    padding: 20px;
+    display: flex; /* Flexbox for main section */
+    flex-direction: row;
 }
 
-article {
-    flex: 2; /* Article takes up 2/3 of the main area */
-    padding: 20px;
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    background-color: #f4f4f4; /* Example background color */
+/* Article Styles */
+article {article h3 {
+    color: #007BFF; /* Color for subheadings */
+    border-bottom: 2px solid #007BFF; /* Underline effect */
+    padding-bottom: 5px; /* Spacing */
 }
 
+aside h3 {
+    color: #333; /* Darker color for aside headings */
+}
+
+header nav ul li a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+    flex: 2; /* Article takes 2/3 of the width */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd; /* Add border */
+    overflow-y: auto; /* Scrollable if content overflows */
+}
+
+/* Aside Styles */
 aside {
-    flex: 1; /* Aside takes up 1/3 of the main area */
+    flex: 1; /* Aside takes 1/3 of the width */
     padding: 20px;
-    overflow-y: auto; /* Allow scrolling if content overflows */
-    background-color: #e7e7e7; /* Example background color */
+    background-color: #f9f9f9; /* Slightly different background */
+    border: 1px solid #ddd; /* Add border */
+    overflow-y: auto; /* Scrollable if content overflows */
 }
 
+/* Footer Styles */
 footer {
-    background-color: #4CAF50; /* Example footer color */
+    background-color: #007BFF; /* Same color as header */
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
 }
 
-/* Responsive design styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Stack article and aside vertically */
+        flex-direction: column; /* Stack article and aside vertically on smaller screens */
     }
 
-    article, aside {
-        flex: auto; /* Allow full width on small screens */
-        overflow-y: visible; /* Disable scrolling if stacked */
+    aside {
+        order: -1; /* Move aside above the article on smaller screens */
     }
 }
+
 
