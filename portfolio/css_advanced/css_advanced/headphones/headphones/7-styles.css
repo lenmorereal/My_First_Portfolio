@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+.what-we-do {
+    padding: 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.service {
+    width: 30%;
+    padding: 10px;
+}
+
+.icon {
+    font-size: 50px; /* Adjust size as needed */
+    color: #FF6565; /* Change to your desired color */
+    display: block;
+    margin-bottom: 10px;
+}
+.our-results {
+    padding: 20px;
+    text-align: center;
+}
+
+.results {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.result {
+    width: 30%;
+    padding: 10px;
+}
+.contact-us {
+    padding: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #FF6565; /* Change as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9; /* Animation effect */
+}
+.our-results {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.pentagon-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between pentagons */
+}
+
+.pentagon {
+    width: 100px; /* Adjust the size as needed */
+    height: 100px;
+    background-color: #FF6565; /* Color of the pentagon */
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    /* The above values create a pentagon shape */
+}
+/* Example CSS animations */
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Apply animations to specific sections */
+.what-we-do .item {
+    animation: scaleAnimation 0.5s infinite alternate;
+}
+
+.our-results .item {
+    animation: rotateAnimation 1s infinite;
+}
+
+/* Optional: Add hover effects */
+.what-we-do .item:hover, .our-results .item:hover {
+    animation: scaleAnimation 0.5s ease;
+    transform: scale(1.05); /* Scale up on hover */
+}
